@@ -11,5 +11,4 @@ clean:
 bin/%.pdf: src/%.tex
 	$(PDFLATEX) $<
 	mv -f $(notdir $@) $@
-	evince $@ >/dev/null 2>&1 &
 
