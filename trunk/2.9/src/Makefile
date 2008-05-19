@@ -1,11 +1,8 @@
-TICKET=ticket_2.5
+TICKET=ticket_2.9
 
-$(TICKET): figures $(TICKET).tex
+$(TICKET): $(TICKET).tex
 	latex $(TICKET).tex
 
 pdf: $(TICKET)
 	pdflatex $(TICKET).tex
 	mv $(TICKET).pdf ../bin
-
-figures: figures.mp
-	mp figures.mp

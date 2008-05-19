@@ -1,39 +1,7 @@
-\documentclass[a4paper]{article}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T2A]{fontenc}
-\usepackage[russian]{babel}
-
-\usepackage{graphicx}
-\usepackage{indentfirst}
-\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=1cm,head=17pt]{geometry}
-
-\usepackage{tabularx}
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-
-\usepackage{amssymb}
-\renewcommand{\le}{\leqslant}
-\renewcommand{\ge}{\geqslant}
-
-\usepackage{ifpdf}
-\ifpdf
-\DeclareGraphicsRule{*}{mps}{*}{}
-\fi
-
-\newcounter{algorithm}
-\newenvironment{algorithm}[1]{\par\smallskip\noindent\refstepcounter{algorithm}%
-  \textbf{Алгоритм \arabic{algorithm}. #1}\begin{enumerate}}{\end{enumerate}}
-
-\newtheorem{define}{Определение}
-\renewcommand{\thedefine}{\arabic{define}.}
-
-\newtheorem{theorem}{Теорема}
-\renewcommand{\thetheorem}{\arabic{theorem}.}
-
-\frenchspacing
+\include{preamble}
 
 \begin{document}
-\noindent{\huge 2.5. Вычислительная геометрия на плоскости}
+\ticket{2.5. Вычислительная геометрия на плоскости}
 \section{Уравнения точек, прямых, окружностей}
 \begin{define}
   Евклидово пространство размерности $k$ $E^k$ --- пространство
@@ -221,12 +189,12 @@ $O(n)$. В худшем случае, когда все $n$ точек лежа�
   выпуклой и удовлетворяет условию Делоне.
 \end{define}
 
-Многие  алгоритмы  построения  триангуляции  Делоне  используют 
+Многие  алгоритмы  построения  триангуляции  Делоне  используют
 следующую теорему.
 
 \begin{figure}
   \begin{tabularx}{\textwidth}{YY}
-    \includegraphics{figures.1} & \includegraphics{figures.2} \\
+    \includegraphics{figures-1.ps} & \includegraphics{figures-2.ps} \\
     (а) & (б) \\
   \end{tabularx}
   \caption{Флип при построении триангуляции Делоне. $D$ принадлежит
@@ -319,7 +287,7 @@ $O(n)$. В худшем случае, когда все $n$ точек лежа�
 
 \begin{figure}[t]
   \centering
-  \includegraphics{figures.3}
+  \includegraphics{figures-3.ps}
   \caption{$2d$-дерево}
   \label{fig:2d-tree}
 \end{figure}

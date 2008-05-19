@@ -1,6 +1,8 @@
-ticket_2.20: ticket_2.20.tex
-	latex ticket_2.20.tex
+TICKET=ticket_2.20
 
-pdf: ticket_2.20
-	pdflatex ticket_2.20.tex
-	mv ticket_2.20.pdf ../bin
+$(TICKET): $(TICKET).tex
+	latex $(TICKET).tex
+
+pdf: $(TICKET)
+	pdflatex $(TICKET).tex
+	mv $(TICKET).pdf ../bin
