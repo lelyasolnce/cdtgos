@@ -1,15 +1,8 @@
-vardef circumcenter(expr p, q, r) =
-  pair u,v,s,t;
-
-  u=0.5[p,q];
-  v=u+((q-p) rotated 90);
-
-  s=0.5[q,r];
-  t=s+((q-r) rotated 90);
-
-  pair res;
-  res=whatever[u,v]=whatever[s,t];
-  res
+vardef circumcenter(expr a, b, c) =
+  pair o;
+  o - 1/2[b,c] = whatever * (b-c) rotated 90;
+  o - 1/2[a,b] = whatever * (a-b) rotated 90;
+  o
 enddef;
 
 pair p[];
@@ -71,3 +64,11 @@ beginfig(3);
 endfig;
 
 end;
+
+
+
+
+
+
+
+
