@@ -1,3 +1,6 @@
+prologues:=2;
+filenametemplate "%j-%c.ps";
+
 vardef circumcenter(expr a, b, c) =
   pair o;
   o - 1/2[b,c] = whatever * (b-c) rotated 90;
@@ -64,11 +67,3 @@ beginfig(3);
 endfig;
 
 end;
-
-
-
-
-
-
-
-

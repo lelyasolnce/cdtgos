@@ -1,25 +1,7 @@
-\documentclass[a4paper]{article}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T2A]{fontenc}
-\usepackage[russian]{babel}
-
-\usepackage{verbatim}
-\usepackage{indentfirst}
-\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=1cm,head=17pt]{geometry}
-
-% \makeatletter
-% \renewcommand{\@listI}{%
-%   \leftmargin\leftmargini
-%   \parsep=0pt plus 1pt
-%   \itemsep=\parsep
-%   \topsep 8\p@ \@plus2\p@ \@minus4\p@}
-% \makeatother
-
-\frenchspacing
+\include{../../2.5/src/preamble}
 
 \begin{document}
-\noindent{\huge 2.20. Функциональные языки программирования}
+\ticket{2.20. Функциональные языки программирования}
 \section{Функциональные языки программирования}
 В языках функционального программирования основным конструктивным
 элементом является математическое понятие функции. Существует различия
@@ -246,7 +228,7 @@ comp f g = \x -> f (g x)
 $\beta$-редукция. Такой способ называется \emph{аппликативным порядком
 вычислений} (applicative-order evaluation).
 Альтернативный метод <<полная подстановка, затем редукция>> известен
-под названием \emph{нормальный порядок вычислений}(normal-order
+под названием \emph{нормальный порядок вычислений} (normal-order
 evaluation). В этом случае сразу будет выполнена подстановка $e2$ в
 $e1$.
 
