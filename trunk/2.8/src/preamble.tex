@@ -5,6 +5,7 @@
 \usepackage[russian]{babel}
 
 \usepackage{verbatim}
+\usepackage{ralg}
 \usepackage{graphicx}
 \usepackage{indentfirst}
 \usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=1cm,head=17pt]{geometry}
@@ -22,9 +23,9 @@
 \DeclareGraphicsRule{*}{mps}{*}{}
 \fi
 
-\newcounter{algorithm}
-\newenvironment{algorithm}[1]{\par\smallskip\noindent\refstepcounter{algorithm}%
-  \textbf{Алгоритм \arabic{algorithm}. #1}\begin{enumerate}}{\end{enumerate}}
+%\newcounter{algorithm}
+%\newenvironment{algorithm}[1]{\par\smallskip\noindent\refstepcounter{algorithm}%
+%  \textbf{Алгоритм \arabic{algorithm}. #1}\begin{enumerate}}{\end{enumerate}}
 
 \newtheorem{define}{Определение}
 \renewcommand{\thedefine}{\arabic{define}.}
